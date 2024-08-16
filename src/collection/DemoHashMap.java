@@ -1,28 +1,36 @@
 package collection;
 
 import java.util.HashMap;
-
+import java.util.Map.Entry;
+import java.util.Set;
 public class DemoHashMap {
-	public static void main(String[] args) {
-		
-	
-	HashMap<Integer,String> h= new HashMap<Integer,String>();
+public static void main(String[] args) {
 
-	//put method is used to add data
+HashMap<String, String> hm= new HashMap<String, String>();
+System.out.println(hm);
+//put --> add elements in hashMap
+hm.put("MH12", "Pune");
+hm.put("MH13", "Solapur");
+hm.put("MH14", "PCMC");
+System.out.println(hm);
+hm.put("MH12", "Mumbai");
+System.out.println(hm);
+hm.put("MH01", "Mumbai");
+System.out.println(hm);
+System.out.println(hm.get("MH13"));
+System.out.println(hm.containsKey("MH01"));
+System.out.println(hm.containsKey("MH50"));
+System.out.println(hm.containsValue("Mumbai"));
+System.out.println(hm.containsValue("Nagpur"));
 
-	h.put(111, "omkar");
-	h.put(112, "vikas");
-	h.put(113, "rahul");
-	h.put(113, "shubham");
-	h.put(113, "pramod");
-	h.put(114, "omkar");
-	h.put(null,null);
-	h.put(116,null);
-	h.put(115,null);
-
-
-	System.out.println(h);
-
+Set<Entry<String, String>> mySet = hm.entrySet();
+for(Entry<String, String> m:mySet)
+{
+// System.out.println(m);
+// System.out.println(m.getKey());
+// System.out.println(m.getValue());
+System.out.println(m.getKey()+" "+m.getValue());
+}
 
 }
 }
